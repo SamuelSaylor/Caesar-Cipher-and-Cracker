@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 //basically i encrypt/decrypt messages based on a shift down a certain number of positions. quick win as ive been watching spurs finals game and its already 10 pm lol
 int main(int argc, char *argv[]) {
@@ -10,10 +11,25 @@ int main(int argc, char *argv[]) {
     }
 
     int shift = atoi(argv[2]);
+    size_t length = strlen(argv[3]);
 
     if(!((strcmp(argv[1], "encrypt") == 0)||(strcmp(argv[1], "decrypt") == 0))){
         printf("Only valid instructions are encrypt and decrypt.");
+        return 1;
     }
+
+    char ret[] = argv[3];
+
+    if((strcmp(argv[1], "encrypt") == 0)){
+        int i = 0;
+        while(ret[i]){
+            ret[i] = ret[i]+shift;
+            i++;
+        }
+
+        printf(ret);
+    }
+
 
     return 0;
 }
