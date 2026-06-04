@@ -46,7 +46,11 @@ When writing this I overestimated how much logic would differentiate between enc
     printf("%s\n",ret);
 ```
 
-If you can't see it, the logic for shifting is almost identical. The common outlier is how shift is affected. Hence I simplified it to just being an if statement
+If you can't see it, the logic for shifting is almost identical. The common outlier is how shift is affected. Hence I simplified it to just being an if statement:
+```
+if((strcmp(argv[1], "decrypt") == 0)){shift = 26 - shift;}
+```
+I take a lot of inspiration Linus Torvald's philosophy. I'm not personally overtly impressed by large programs if they're unnecesarrily long. While it's fun to brag "I wrote 500 lines today!" I find it more pleasing to hear "I shortened my code by 500 lines today!" I suppose efficiency has always been something that pleases me. Tim Duncan is my favorite athlete, I used to hit line drives into the gap instead of trying to crank a homer every time at-bat, and I make simple meals for every breakfast. 
 
 None of this is groundbreaking or new to me, but I find myself becoming better at C as the days go by. It's a fun programming language, just a slight learning curve if you're not as familiar to working with poitners as I am. As an upcoming Sophmore I do like being ahead of my classmates, so I figured this Summer I should master C before taking the Programming in C course so I can work on skills I need to focus on instead of being caught up in learning a new language at the same time.
 
