@@ -23,11 +23,18 @@ int main(int argc, char *argv[]) {
     if((strcmp(argv[1], "encrypt") == 0)){
         int i = 0;
         while(ret[i]){
-            ret[i] = ret[i]+shift;
+            if(ret[i]>='A'&&ret[i]<='Z'){
+                ret[i] = ((ret[i] - 'A' + shift) % 26) + 'A';
+            }else if(ret[i]>='a'&&ret[i]<='z'){
+                ret[i] = ((ret[i] - 'a' + shift) % 26) + 'a';
+            }
+            
             i++;
         }
 
-        printf(ret);
+        printf("%s\n",ret);
+    }else{
+        
     }
 
 
