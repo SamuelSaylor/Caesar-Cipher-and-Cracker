@@ -2,6 +2,10 @@
 <td><img src="./30projects_logo.svg" width="360"/></td>
 <td><h1>Day 3/30 — Caesar Cipher</h1></td>
 </tr></table>
+<table><tr>
+<td><img src="./30projects_logo copy.svg" width="360"/></td>
+<td><h1>Day 8/30 — Caesar Cipher Cracker</h1></td>
+</tr></table>
 
 Today was Game 1 of the Spurs vs Knicks NBA Finals, so I did not do a notable project, instead I focussed on honing in skills before midnight to crunch out Day 3. A Caesar Cipher simply shifts a string of words a certain number of times provided. If my message was "AAA" and I shifted it three times, it becomes "DDD". "ABC" -> "DEF". So on, so forth.
 
@@ -55,3 +59,9 @@ I take a lot of inspiration Linus Torvald's philosophy. I'm not personally overt
 None of this is groundbreaking or new to me, but I find myself becoming better at C as the days go by. It's a fun programming language, just a slight learning curve if you're not as familiar to working with poitners as I am. As an upcoming Sophmore I do like being ahead of my classmates, so I figured this Summer I should master C before taking the Programming in C course so I can work on skills I need to focus on instead of being caught up in learning a new language at the same time.
 
 Thanks for coming to my TED Talk.
+
+### Cracker
+
+For Day 8 (which I did on the 16th, looks like I gotta two a day for a bit) I created a cracker for the cipher. Essentially I had Claude write up a list of common words in the English language and attributed a score to whatever scores the highest. During WW2, Allies intelligence actually managed to crack encyrpted Nazi code by finding common rhetorics, this is the same approach.
+
+I wrote this one in Python as I wanted to learn how to import a C library into Python, no other reason in particular.
