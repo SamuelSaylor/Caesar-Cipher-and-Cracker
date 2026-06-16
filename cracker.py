@@ -26,12 +26,31 @@ COMMON_WORDS = [
 ]
 
 #compiling the program
-cprogram = subprocess.run(["gcc", "main.c", "-o", "main"])
+cprogram = subprocess.run(["gcc", "main.c", "-o", "main"], capture_output=True, text=True)
 if cprogram.returncode != 0:
     print(cprogram.stderr)
     sys.exit(1)
 
 def decryption(txt, shift):
-    dec = subprocess.run(["./main","decrypt",str(shift),txt])
+    binary = "main.exe" if sys.platform == "win32" else "./main"
+    dec = subprocess.run([binary, "decrypt", str(shift), txt], capture_output=True, text=True)
     return dec.stdout.strip()
 
+#####################################################3333333333
+
+msg = input("Insert message to crack")
+
+best_score = 0
+
+for count in range(27): # im aware theres 26 leters in the alphabet its becaus there might be somebody just sending pure english
+    cnt = 0
+    msgs = decryption(msg.lower(),count)
+    spl = msgs.split()
+
+    for selected in spl:
+        if selected in COMMON_WORDS: cnt+=1
+    
+    if cnt > best_score: best_score = count
+
+ret = decryption(msg,best_score)
+print(f"The best score was {best_score} with the message \"{ret}\"")
