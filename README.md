@@ -1,10 +1,10 @@
 <table><tr>
-<td><img src="./30projects_logo.svg" width="360"/></td>
-<td><h1>Day 3/30 — Caesar Cipher</h1></td>
+<td><img src="./15projects_logo.svg" width="360"/></td>
+<td><h1>Day 3/15 — Caesar Cipher</h1></td>
 </tr></table>
 <table><tr>
-<td><img src="./30projects_logo copy.svg" width="360"/></td>
-<td><h1>Day 8/30 — Caesar Cipher Cracker</h1></td>
+<td><img src="./15projects_logo copy.svg" width="360"/></td>
+<td><h1>Day 8/15 — Caesar Cipher Cracker</h1></td>
 </tr></table>
 
 Today was Game 1 of the Spurs vs Knicks NBA Finals, so I did not do a notable project, instead I focussed on honing in skills before midnight to crunch out Day 3. A Caesar Cipher simply shifts a string of words a certain number of times provided. If my message was "AAA" and I shifted it three times, it becomes "DDD". "ABC" -> "DEF". So on, so forth.
